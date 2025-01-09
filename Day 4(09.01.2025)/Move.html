@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            #tag1{
+                color:blue;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: larger;
+
+            }
+            #tag1:hover{
+                color:rgb(29, 232, 188);
+                font-size: large;
+            }
+            .marquee{
+                overflow: hidden;
+                whitespace:nowrap;
+                box-sizing: border-box;
+                animation: marquee 10s linear infinite;
+
+                
+            }
+            #tag2{
+                transition:color o.5s ease;
+                font-size:0.3s ease;
+            }
+            @keyframes marquee{
+                from{
+                    transform:translatex(100%);
+                }
+                to{
+                    transform:translatex(-100%);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="marquee">
+            <h1>Margue in js</h1>
+        </div>
+        <p id="tag1">Text One</p>
+        <p id="tag1">Text Two</p>
+        <script>
+            document.getElementById("tag2").style.color="pink";
+            document.getElementById("tag2").style.fontfamily="Arial"
+            document.getElementById("tag2").style.fontSize="22px";
+        </script>
+    </body>
+</html>

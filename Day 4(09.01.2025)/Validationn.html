@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Validation using JavaScript</title>
+    </head>
+    <body>
+        <h2>JavaScript Validatin</h2>
+        <p>Enter your mobile number:</p>
+        <input id="val">
+        <button type="button" onclick="myFun()">Submit</button>
+        <p id="demo"></p>
+        <script>
+            function myFun(){
+                let a =document.getElementById("val").value;
+                let res;
+                if(a.length<10 || a.length>10){
+                    res="Enter a valid mobile number"
+                }
+                else{
+                    res="Mobile Number Validation Successful";
+                }
+                document.getElementById("demo").innerHTML=res;
+
+            }
+        </script>
+    </body>
+</html>

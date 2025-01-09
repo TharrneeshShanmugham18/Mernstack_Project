@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+
+    <style>
+        body{
+            background-color: aqua;
+            justify-content: center;
+            text-align: center;
+            margin:auto;
+        }
+        .form{
+            max-width: 400px;
+            margin-bottom:auto;
+            font-weight: 100;
+        }
+        .formOne{
+            margin-bottom:20px solid;
+        }
+        label{
+            display:block;
+            margin-bottom: 10px;
+        }
+        input{
+            padding:1px;
+            width: 150px;
+            box-sizing: border-box;
+        }
+
+        button{
+            padding:10px 20px;
+            background-color: blueviolet ;
+            border:1px;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color: chartreuse    ;
+        }
+    </style>
+    
+    
+    <body>
+        <table>
+        <h2>Form Validation</h2>
+
+        <form id="myForm">
+        <tr>
+            <div class="formOne">
+                <label for="username">UserName:</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error" id="usernameError"></div>
+            </div>
+            </tr>
+        <tr>
+            <div class="formOne">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+        </tr>
+            
+        </tr>
+            <div class="formOne">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error" id="passwordError"></div>
+            </div>
+        </tr>
+            <button type="submit">Submit</button>
+        </table>
+        </form>
+        <script>
+            document.getElementById("myForm").addEventListener("submit",function(event){
+                event.preventDefault();
+
+              //If no error is thrown
+                document.getElementById("usernameError").textContent="";
+                document.getElementById("emailError").textContent="";
+                document.getElementById("passwordError").textContent="";
+
+
+                const username=document.getElementById("username").value.trim();
+                const email=document.getElementById("email").value.trim();
+                const password=document.getElementById("password").value.trim();//trim to validate only that particular field.
+
+
+                let valid=true;
+                if(username==""){
+                    document.getElementById("usernameError").textContent="User Name is required.";
+                    valid=false;
+                }
+
+                //Email Validation
+                if(email==""){
+                    document.getElementById("emailError").textContent="Email is required."
+                    valid=false;
+                }
+
+                //Password Validation
+                if(password=""){
+                    document.getElementById("passwordError").textContent="Password is required."
+                    valid=false;
+                }
+                
+
+                //Overall Form Validation
+                if(valid){
+                    alert("Form Validation Successful.");
+                }
+            })
+        </script>
+    </body>
+    
+</html>
