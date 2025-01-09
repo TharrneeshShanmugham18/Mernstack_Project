@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Media Page</title>
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                line-height: 1.5;
+                background: linear-gradient(90deg, rgb(79, 16, 255), rgb(13, 233, 32), aqua);
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                text-align: center;
+                padding: 10%;
+                background: linear-gradient(130deg, rgb(79, 16, 255), rebeccapurple);
+            }
+            header h1 {
+                font-size: 3rem;
+                color: aquamarine;
+                margin-bottom: 35px;
+            }
+            header p {
+                font-size: 2rem; /* Adjusted font size for better readability */
+                margin-bottom: 30px;
+                color: white; /* Added color for better contrast */
+            }
+            header .media {
+                background: rebeccapurple;
+                color: blanchedalmond;
+                padding: 10px 20px; /* Adjusted padding for better appearance */
+                text-decoration: none;
+                font-size: 1rem;
+                border-radius: 35px;
+                transition: transform 0.5s, box-shadow 0.5s;
+            }
+            header .media:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 10px 20px wheat;
+            }
+            .grid-View {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+                padding: 50px 30px;
+                max-width: 1150px;
+                margin: 0 auto; /* Centered the grid view */
+            }
+            .grid {
+                background: yellow;
+                border-radius: 10px;
+                padding: 18px;
+                text-align: center;
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .grid:hover {
+                transform: translateY(-7px);
+                box-shadow: 0 12px 25px rgba(255, 255, 255, 0.6); /* Adjusted shadow color */
+            }
+            .grid h2 {
+                font-size: 1.7rem;
+                margin-bottom: 18px;
+                color: chartreuse;
+            }
+            .grid p {
+                font-size: 1rem;
+                color: darkseagreen;
+            }
+            footer {
+                text-align: center;
+                padding: 20px;
+                background: rebeccapurple; /* Adjusted background color */
+                color: bisque;
+                font-weight: bold;
+            }
+            @media (max-width: 1150px) {
+                .grid-View {
+                    grid-template-columns: repeat(2, 1fr); /* Corrected grid-template-columns syntax */
+                }
+                header h1 {
+                    font-size: 2.5rem; /* Corrected header font-size syntax */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Landing Page</h1>
+            <p>In this webpage we can experience an Impressive Responsive Landing Page</p>
+            <a href="https://www.google.com" class="media">Just Begin!</a> <!-- Corrected link -->
+        </header>
+        <section class="grid-View">
+            <div class="grid">
+                <h2>Discover the Page</h2>
+                <p>Here is an innovative design with Responsive Webpage</p>
+            </div>
+            <div class="grid">
+                <h2>Discover the second page</h2>
+                <p>Experience the seamless website</p>
+            </div>
+        </section>
+    </body>
+</html>
