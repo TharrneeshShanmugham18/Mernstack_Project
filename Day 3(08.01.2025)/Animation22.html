@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation2</title>
+        <style>
+            body{
+                background:linear-gradient(to right, #f710ff, #ff6600);
+                display: flex;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+            .animy{
+                overflow:hidden;
+                border: 2px solid blue;
+                width: 300px;
+                border-radius: 12px;
+                justify-content: center;
+                text-align: center;
+                padding:12px;
+                white-space: nowrap;
+            }
+            .effect{
+                display:inline-block;
+                font-size: 25px;
+                font-weight: bold;
+                animation: scroll-right 12s linear infinite;
+            }
+            @keyframes scroll-right{
+                from{
+                    transform: translateX(100%);
+                }
+                to{
+                    transform: translateX(-100%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="animy">
+            <div class="effect">Here is a scrolling text.</div>
+        </div>
+    </body>
+</html>
